@@ -14,7 +14,7 @@ class CustomTheme(Base):
 
         super().set(
             body_background_fill=body_background_fill,
-            button_primary_background_fill=yellow,
+            button_primary_background_fill=red,
             button_primary_text_color=white,
             button_secondary_background_fill=red,
             button_secondary_text_color=white,
