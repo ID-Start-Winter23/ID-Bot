@@ -26,7 +26,7 @@ def main():
     chatbot = gr.ChatInterface(
         fn=response,
         retry_btn=None,
-        undo_btn=None,
+        undo_btn="Name",
         theme=custom_theme,
     )
 
