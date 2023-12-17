@@ -18,7 +18,6 @@ class CustomTheme(Soft):
         panel_color = red
         accent = purple
         accent_soft = "#49637a28"
-
         
         primary_dark = "#121212"
         secondary_dark = "#242424"

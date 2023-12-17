@@ -69,7 +69,6 @@ def response(message, history):
         answer = default_text
     else:
         answer = str(query_engine.chat(message, chat_history=query_engine.chat_history))
-    #history.append((message, answer))
     print("message", message)
     print("answer", answer)
     print("history", history)
@@ -86,6 +85,7 @@ def main():
         avatar_images=["assets/smile.png", "assets/mucdai.png"],
         layout='bubble',
         height=600,
+        value=[[None, default_text]]
     )
 
     chat_interface = gr.ChatInterface(
