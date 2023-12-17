@@ -1,24 +1,64 @@
-from gradio.themes.base import Base
+from gradio.themes.soft import Soft
+from gradio.themes.utils import fonts
 
 
-class CustomTheme(Base):
+class CustomTheme(Soft):
 
     def __init__(self):
-        super().__init__()
+        super().__init__(
+            font=fonts.GoogleFont("Roboto")
+        )
 
         white = "#FFFFFF"
         purple = "#571DF9"
         red = "#FA5558"
 
-        body_background_fill = "repeating-linear-gradient(45deg, rgba(39, 24, 152, 0.8), rgba(39, 24, 152, 0.8) 10px, rgba(39, 24, 152, 1.0), rgba(250, 85, 88, 1.0) 20px);"
+        primary = white
+        secondary = "#e6e6e6"
+        panel_color = red
+        accent = purple
+        accent_soft = "#49637a28"
+
+        
+        primary_dark = "#121212"
+        secondary_dark = "#242424"
+        panel_color_dark = red
+        accent_dark = purple
+        accent_soft_dark = "#101727"
+        text_color_dark = white
 
         super().set(
-            body_background_fill=body_background_fill,
-            button_primary_background_fill=purple,
-            button_primary_text_color=white,
-            button_secondary_background_fill=red,
+            # LIGHT MODE
+            body_background_fill=primary,
+            background_fill_secondary=primary,
+            panel_background_fill=panel_color,
+            border_color_primary=primary,
+            block_background_fill=secondary,
+            block_border_color=primary,
+            block_label_background_fill=primary,
+            input_background_fill="#DADFE6",
+            input_border_color=secondary,
+            button_secondary_background_fill=accent,
             button_secondary_text_color=white,
-            button_secondary_border_color=white,
-            color_accent_soft="rgb(72, 160, 203)",
-            border_color_accent_subdued="rgb(72, 160, 203)",
+            color_accent_soft=accent_soft,
+            border_color_accent_subdued=accent,
+
+            # DARK MODE
+            body_background_fill_dark=primary_dark,
+            background_fill_secondary_dark=secondary_dark,
+            panel_background_fill_dark=secondary_dark,
+            border_color_primary_dark=primary_dark,
+            block_background_fill_dark=secondary_dark,
+            block_border_color_dark=secondary_dark,
+            block_label_background_fill_dark=primary_dark,
+            block_label_text_color_dark=text_color_dark,
+            input_background_fill_dark=panel_color_dark,
+            input_border_color_dark=secondary_dark,
+            button_primary_background_fill_dark=accent_dark,
+            button_primary_text_color_dark=primary_dark,
+            color_accent_soft_dark=accent_soft_dark,
+            border_color_accent_subdued_dark=accent_soft_dark,
+
+            block_radius="15px",
+            container_radius="32px",
         )
