@@ -81,6 +81,7 @@ def main():
 
     custom_theme = CustomTheme()
 
+    # default_text noch einbauen
     chatbot = gr.Chatbot(
         avatar_images=["assets/smile.png", "assets/mucdai.png"],
         layout='bubble',
