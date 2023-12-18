@@ -48,7 +48,6 @@ query_engine = index.as_chat_engine(
     chat_mode = "context",
     system_prompt = system_prompt,
     context_template = context,
-    service_context = service_context,
 )
 
 default_text="Ich beantworte Fragen zum Modulhandbuch des Studiengangs Informatik und Design. Wie kann ich Dir helfen?"
