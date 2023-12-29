@@ -75,7 +75,6 @@ def response(message, history):
 
 
 def main():
-    #openai.api_key="sk-..."
     openai.api_key = os.environ["OPENAI_API_KEY"]
 
     custom_theme = CustomTheme()
